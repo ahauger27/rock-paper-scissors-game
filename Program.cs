@@ -1,7 +1,8 @@
-﻿Random opponentMove = new Random();
+﻿Random randomMove = new Random();
 
 string? playerName;
 string? playerMove;
+string opponentMove;
 int playerScore = 0;
 int opponentScore = 0;
 bool winCondition = false;
@@ -20,11 +21,23 @@ do
 {
     Console.WriteLine("Make your move (ROCK, PAPER, or SCISSORS).");
     playerMove = Console.ReadLine().ToUpper();
+    opponentMove = moveList[randomMove.Next(0, 3)].ToUpper();
 
     if (moveList.Contains(playerMove))
     {
-        if ()
-
+        if (playerMove == opponentMove)
+        {
+            Console.WriteLine("This round is a DRAW.");
+        }
+        else if ((playerMove == "ROCK") && (opponentMove == "PAPER"))
+        {
+            Console.WriteLine("The opponent wins this round.");
+            opponentScore += 1;
+        }
+        else
+        {
+            Console.WriteLine("yippee");
+        }
     }
     else
     {
