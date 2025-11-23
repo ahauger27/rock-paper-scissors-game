@@ -34,6 +34,10 @@ do
             Console.WriteLine("The opponent wins this round.");
             opponentScore += 1;
         }
+        else if ((playerMove == "ROCK") && (opponentMove == "SCISSORS"))
+        {
+            Console.WriteLine("You win this round!")
+        } 
         else
         {
             Console.WriteLine("yippee");
